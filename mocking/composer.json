@@ -1,0 +1,10 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Adelowo\\Mocking\\" : "src"
+		}
+	},
+	"require-dev": {
+		"mockery/mockery": "^0.9.6"
+	}
+}
