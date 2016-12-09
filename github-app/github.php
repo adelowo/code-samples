@@ -18,14 +18,10 @@ $githubClient = new Adelowo\Github\GithubClient(new GuzzleHttp\Client());
 
 $data = [];
 
-if ($options['repo']['r']) {
-	$data = $githubClient->getUsersRepositories($options['username']);
+if ($options['repo']) {
+	$data = $githubClient->getUserRepositories($options['username'][0]);
 } else {
 	$data = $githubClient->getUserProfile($options['username']);
-}
-
-if ($options['file']['f']) {
-	return file_put_contents($options['file']['f'], $data);
 }
 
 var_dump($data);
