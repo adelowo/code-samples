@@ -12,8 +12,6 @@ if (!$options['username']) {
 
 $options['repo'] = getopt("r:");
 
-$options['file'] = getopt("f:");
-
 $githubClient = new Adelowo\Github\GithubClient(new GuzzleHttp\Client());
 
 $data = [];
