@@ -129,7 +129,7 @@ function parse_validator_rules(string $index)
 }
 
 
-function validateLengthRule(array $ruleData, &$errorBag)
+function validateLengthRule(array $ruleData, $errorBag)
 {
     $index = $ruleData['index'];
 
@@ -155,7 +155,7 @@ function validateLengthRule(array $ruleData, &$errorBag)
     }
 }
 
-function validateEmailRule(array $ruleData, &$errorBag)
+function validateEmailRule(array $ruleData, $errorBag)
 {
     $index = $ruleData['index'];
 
