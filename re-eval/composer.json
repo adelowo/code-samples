@@ -1,0 +1,20 @@
+{
+  "name": "adelowo/re-eval",
+  "license": "MIT",
+  "suggest": {
+    "respect/validation": "Use a full featured validator with tons of rules instead"
+  },
+  "autoload": {
+    "files": [
+      "src/validator.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Adelowo\\Reeval\\Tests\\" : "tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  }
+}
