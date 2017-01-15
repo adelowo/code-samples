@@ -88,7 +88,7 @@ function validate(array $rules)
 
     foreach ($rules as $rule) {
 
-        $parsedRules = parse_validator_rules($rule);
+        $parsedRules = parseValidatorRules($rule);
 
         foreach ($parsedRules['rules'] as $parsedRule) {
 
@@ -103,7 +103,7 @@ function validate(array $rules)
                     continue;
 
                 default :
-                    throw_unknown_rule_exception($parsedRule[0]);
+                    throwUnknownRuleException($parsedRule[0]);
             }
         }
     }
@@ -111,7 +111,7 @@ function validate(array $rules)
     return $validator;
 }
 
-function parse_validator_rules(string $index)
+function parseValidatorRules(string $index)
 {
 
     $explodedRule = explode(":", $index);
@@ -164,7 +164,7 @@ function validateEmailRule(array $ruleData, $errorBag)
     }
 }
 
-function throw_unknown_rule_exception(string $ruleName)
+function throwUnknownRuleException(string $ruleName)
 {
     throw new Exception(
         "The rule {$ruleName} doesn't exist on this validator. 

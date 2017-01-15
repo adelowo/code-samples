@@ -5,7 +5,7 @@ namespace Adelowo\Reeval\Tests;
 use Exception;
 use PHPUnit\Framework\TestCase;
 use function Adelowo\Reeval\validate;
-use function Adelowo\Reeval\parse_validator_rules;
+use function Adelowo\Reeval\parseValidatorRules;
 
 class ReevalValidatorTest extends TestCase
 {
@@ -28,7 +28,7 @@ class ReevalValidatorTest extends TestCase
             ]
         ];
 
-        $this->assertSame($expectedValues, parse_validator_rules($rule));
+        $this->assertSame($expectedValues, parseValidatorRules($rule));
     }
 
     public function testItParsesASingleRule()
@@ -45,7 +45,7 @@ class ReevalValidatorTest extends TestCase
             ]
         ];
 
-        $this->assertSame($expected, parse_validator_rules($rule));
+        $this->assertSame($expected, parseValidatorRules($rule));
     }
 
     public function testEmailRuleWorksCorrectly()
